@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h3>To check number is perfect number or not</h3>
+    <!-- Input:
+    Number: 6,28,496
+
+    Output:
+    It is a perfect number
+    Explanation:
+
+    Divisors of 6 are: 1, 2, 3
+    Sum of the divisors is: 1+2+3 =6  -->
+    Number:<input type="number" id="num"><br><br>
+    <button type="button" onclick="perfectNum()">Number Is</button>
+    <p id="p1"></p>
+
+    <script>
+        function perfectNum() {
+            var num = Number(document.getElementById("num").value);
+            var addition = 0;
+            var flag = num;
+            for(var i = 0; i < num; i++){
+                var remainder = num % i;
+                if(remainder == 0) {
+                    addition += i;
+                }
+            }
+            if(addition == flag) {
+                document.getElementById("p1").innerHTML = (`${num} is Perfect Number `);
+            }
+            else {
+                document.getElementById("p1").innerHTML = (`${num} is Not Perfect Number `);
+            }
+        }
+    </script>
+</body>
+</html>

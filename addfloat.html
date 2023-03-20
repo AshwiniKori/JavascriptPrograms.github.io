@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- <h1>Adding float values in JavaScript</h1>
+      <p id="num1">4.12</p>
+      <p id="num1">9.87</p>
+      <button onclick="add()">Click To add values </button>
+      <h3 id="result">
+      <h3>
+      <script>
+        var num1 = document.getElementById("num1").innerHTML;
+        var num2 = document.getElementById("num2").innerHTML; 
+          function add() { 
+            		result.innerHTML = (parseFloat('4.12') +  
+                               parseFloat('9.87')).toFixed(2)
+            }  -->
+            <!-- //or
+        //   function add() { 
+        //     		result.innerHTML = Math.round((parseFloat('4.12') +  
+        //                        parseFloat('9.87'))*100)/100
+        //     } 
+      </script> -->
+      <h1>Adding float values in JavaScript</h1>
+      Number1:<input type="number" id="num1"><br><br>
+      Number2:<input type="number" id="num2"><br><br>
+      <button type="button" onclick="addFloat()">Click Me</button>
+      <p id="p1"></p>
+
+      <script>
+        function addFloat() {
+            var num1 = document.getElementById("num1").value;
+            var num2 = document.getElementById("num2").value;
+            var result = (parseFloat(num1) + parseFloat(num2)).toFixed(2);
+            document.getElementById("p1").innerHTML = `Addition of ${num1} and ${num2} is ${result}`;
+
+        }
+      </script>
+
+</body>
+</html>

@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h3>Calculator</h3>
+    Number1:<input type="number" id="num1"><br><br>
+    Number2:<input type="number" id="num2"><br><br>
+    Operator:<input type="text" id="opr"><br><br>
+    <button onclick="calculator()">Result Is</button>
+    <p id="p1"></p>
+
+    <script>
+        function calculator() {
+            var num1 = Number(document.getElementById("num1").value);
+            var num2 = Number(document.getElementById("num2").value);
+            var opr = document.getElementById("opr").value;
+            if (opr == "+") {
+               document.getElementById("p1").innerHTML = `${num1} + ${num2} = ${num1 + num2}`;
+            }
+            else if (opr == "-") {
+               document.getElementById("p1").innerHTML = `${num1} - ${num2} = ${num1 - num2}`
+            }
+            else if (opr == "*") {
+               document.getElementById("p1").innerHTML = `${num1} * ${num2} = ${num1 * num2}`
+            }
+            else if (opr == "/") {
+               document.getElementById("p1").innerHTML = `${num1} / ${num2} = ${num1 / num2}`
+            }
+            else if (opr == "%") {
+               document.getElementById("p1").innerHTML = `${num1} % ${num2} = ${num1 % num2}`
+            }
+            else {
+                document.getElementById("p1").innerHTML = "Inavlid Operator";
+            }
+        }
+    </script>
+</body>
+</html>

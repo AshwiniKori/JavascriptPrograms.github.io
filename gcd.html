@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h3>Gcd/hcf of two Numbers using for loop</h3>
+    <p>The Highest Common Factor (HCF) or Greatest Common Divisor (GCD) of two integers is the largest integer that can exactly divide both integers (without a remainder).
+    <br>For example, the HCF of 60 and 72 is 12.</p>
+    Number1:<input type="number" id="num1"><br><br>
+    Number2:<input type="number" id="num2"><br><br>
+    Gcd:<button type="button" onclick="gcdNumber()">Click Me</button>
+    <p id="p1"></p>
+
+    <script>
+        function gcdNumber() {
+            var num1 = document.getElementById("num1").value;
+            var num2 = document.getElementById("num2").value;
+            
+            for(var i = 1; i <= num1 && i <= num2; i++) {
+                
+                if(num1 % i == 0 && num2 % i == 0) {
+                    var gcd = i;
+                }
+            }
+            document.getElementById("p1").innerHTML = `GCD/HCF of ${num1} and ${num2} is ${gcd}`;
+        }
+    </script>
+</body>
+</html>

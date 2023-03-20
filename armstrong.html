@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h3>JavaScript code to check number is Armstrong or not</h3>
+    <!-- Input:
+    Number: 153
+
+    Output:
+    It is a prime number
+
+    Explanation:
+    153 = (1*1*1) + (5*5*5) + (3*3*3) = 1+125+27 = 153
+    Here, number (153) is equal to its sum of the digits cube (153). -->
+    Number:<input type="number" id="num"><br><br>
+    <button onclick="armstrongNum()">Click Me</button>
+    <p id="p1"></p>
+
+    <script>
+       function armstrongNum() {
+        var number = Number(document.getElementById("num").value);
+        var flag = number;
+        var addition = 0;
+        while (number > 0) {
+            var remainder = number % 10;
+			addition = addition + remainder*remainder*remainder;
+			number = parseInt(number/10);
+        }
+        if (addition == flag) {
+            document.getElementById("p1").innerHTML = "Is Armstrong Number";
+        }
+        else {
+            document.getElementById("p1").innerHTML = "Is Not Armstrong Number";
+        }
+       }
+
+    </script>
+</body>
+</html>

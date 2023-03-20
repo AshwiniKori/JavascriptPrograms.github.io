@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h2>JavaScript Program to Find the Factorial of a Number</h2>
+    Number:<input type="number" id="num"><br><br>
+    <button onclick="factorial()">Output Is</button>
+    <p id="p1"></p>
+
+    <script>
+
+        function factorial() {
+            var number = parseInt(document.getElementById("num").value);
+
+
+            // checking if number is negative
+            if (number < 0) {
+                document.getElementById("p1").innerHTML = ('Error! Factorial for negative number does not exist.');
+            }
+
+            // if number is 0
+            else if (number === 0) {
+                document.getElementById("p1").innerHTML = (`The factorial of ${number} is 1.`);
+            }
+
+            // if number is positive
+            else {
+                var fact = 1;
+                for (i = 1; i <= number; i++) {
+                    fact *= i;
+                }
+                document.getElementById("p1").innerHTML = `The factorial of ${number} is ${fact}`;
+            }
+        }
+    </script>
+</body>
+
+</html>

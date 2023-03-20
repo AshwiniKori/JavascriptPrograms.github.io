@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h3>Factors of Positive Number</h3>
+    <p>To be the factors of a number, the factor number should exactly divide the number (with 0 remainder). For
+        example,
+        <br>The factor of 12 is 1, 2, 3, 4, 6, and 12.
+    </p>
+
+    <script>
+        // take input
+        const num = prompt('Enter a positive number: ');
+
+        document.write(`The factors of ${num} is:`);
+
+        // looping through 1 to num
+        for (let i = 1; i <= num; i++) {
+
+            // check if number is a factor
+            if (num % i == 0) {
+                document.write(i + ",");
+            }
+        }
+    </script>
+</body>
+
+</html>

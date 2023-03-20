@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <!-- <h2>Converting decimal number to binary</h2>
+    Decimal Number:<input type="number" id="num"><br><br>
+    <button onclick="convertToBinary()">Binary Number Is</button>
+    <p id="p1"></p> -->
+
+    <script>
+        // function convertToBinary(x) {
+        //     var number = document.getElementById("num").value;
+        //     var bin = 0;
+        //     var rem, i = 1, step = 1;
+        //     while (x != 0) {
+        //         rem = x % 2;
+        //         document.getElementById("p1").innerhtml =
+        //             `Step ${step++}: ${x}/2, Remainder = ${rem}, Quotient = ${parseInt(x / 2)}`;
+        //         x = parseInt(x / 2);
+        //         bin = bin + rem * i;
+        //         i = i * 10;
+        //     }
+        //     document.getElementById("p1").innerHTML = (`Binary: ${bin}`);
+        // }
+
+        // convertToBinary(number);
+        function convertToBinary(x) {
+            var bin = 0;
+            var rem, i = 1, step = 1;
+            while (x != 0) {
+                rem = x % 2;
+                document.write(
+                    `Step ${step++}: ${x}/2, Remainder = ${rem}, Quotient = ${parseInt(x / 2)}`
+                );
+                x = parseInt(x / 2);
+                bin = bin + rem * i;
+                i = i * 10;
+            }
+            document.write(`Binary: ${bin}`);
+        }
+
+        // take input
+        var number = prompt('Enter a decimal number: ');
+
+        convertToBinary(number);
+
+    </script>
+</body>
+
+</html>

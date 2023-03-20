@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h3>Check number is palindrome or not in JavaScript</h3>
+    <p>When a number doesn’t change it’ s value or meaning even after rotation from left to right or vice a versa, then the number is palindrome number.
+    <br>For example: 12321 after rotation 12321number is still same.</p>
+    Number:<input type="number" id="num"><br><br>
+    <button onclick="palindromeNum()">Click Me</button>
+    <p id="p1"></p>
+
+    <script>
+        function palindromeNum() {
+		var rem, temp, final = 0;
+		var number = Number(document.getElementById("num").value);
+
+		temp = number;
+		while(number>0)
+		{
+			rem = number%10;
+			number = parseInt(number/10);
+			final = final*10+rem;
+		}
+		if(final==temp)
+		{
+			document.getElementById("p1").innerHTML ="Number is Palindrome";
+		}
+		else
+		{
+			document.getElementById("p1").innerHTML ="Number is Not Palindrome";
+		}
+	}
+    </script>
+</body>
+</html>

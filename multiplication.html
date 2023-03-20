@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h3>Print Multiplication table using for loop</h3>
+    
+    Number:<input type="number" id="num"><br><br>
+    <button type="button" onclick="multiplicationTable()">Table Is</button>
+    <p id="p1"></p>
+
+    <script>
+        function multiplicationTable() {
+            var num = document.getElementById("num").value;
+
+            for (var i = 1; i <= 10; i++) {
+                
+                document.getElementById("p1").innerHTML += `${num} X ${i} = ${num * i} <br>`;
+            }
+        }
+    </script>
+</body>
+</html>

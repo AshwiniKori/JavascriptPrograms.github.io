@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h3>program to reverse a number using while loop</h3>
+    Number:<input type="number" id="num"><br><br>
+    <button type="button" onclick="reverseNum()">Revesed Number</button>
+    <p id="p1"></p>
+
+    <script>
+        function reverseNum() {
+            var number = document.getElementById("num").value;
+            var reverse = 0;
+        
+            while(number > 0){
+                var remainder = number % 10;
+                reverse = (reverse * 10) + remainder;
+                number =parseInt(number / 10);
+            }
+
+            document.getElementById("p1").innerHTML = `Reversed Number is ${reverse}`;
+    
+        }
+    </script>
+</body>
+</html>

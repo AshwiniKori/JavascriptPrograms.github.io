@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h3>code to check whether a Number is Prime or Not</h3>
+    <p>Prime: When a number can be divide by one (1) or itself then the number is Prime number.Example: 2 3 5 7 11 ... etc.</p>
+    Number:<input type="number" id="num"><br><br>
+    <button type="button" onclick="primeNum()">Number Is</button>
+    <p id="p1"></p>
+
+    <script>
+        function primeNum() {
+		var i,flag=0,number;
+		number = Number(document.getElementById("num").value);
+
+		for(i=2; i <= number/2; i++)
+		{
+			if(number % i == 0)
+			{
+				flag = 1;
+				break;
+			}
+		}
+		if(flag == 0)
+		{
+			document.getElementById("p1").innerHTML=(number+"- is Prime");
+		}
+		else
+		{
+			document.getElementById("p1").innerHTML=(number+"-is not Prime");
+		}
+	}
+    </script>
+</body>
+</html>
